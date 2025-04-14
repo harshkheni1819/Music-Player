@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="Main.css">
+    <script src="https://cdn.jsdelivr.net/npm/jsmediatags@3.9.5/dist/jsmediatags.min.js"></script>
+</head>
+<body>
+    <div class="music-player" id="music-player">
+        <header>
+          <h2 id="song-title">Select a Song</h2>
+          <p id="song-artist">Artist</p>
+          <p id="song-album">Album</p>
+        </header>
+    
+        <audio id="audio-player" controls></audio>
+        <canvas id="visualizer"></canvas>
+    
+        <div class="controls">
+          <button id="play-button">Play</button>
+          <div class="progress-container">
+            <span id="current-time">0:00</span>
+            <input type="range" id="progress-bar" value="0" max="100">
+            <span id="duration">0:00</span>
+          </div>
+          <input type="range" id="volume-control" value="100" max="100">
+          <button id="theme-toggle">Light Mode</button>
+          <input type="file" id="file-upload" accept="audio/*">
+        </div>
+    
+        <ul class="playlist" id="playlist"></ul>
+      </div>
+    
+</body>
+<script src="Main.js"></script>
+</html>
